@@ -20,14 +20,27 @@ ul, ol {
 }
 
 /* Упрощаем работу с изображениями */
-img, picture {
+img, video {
   max-width: 100%;
   display: block;
+}
+
+/* Запрещаем перетаскивание и выделение для картинок и видео */
+img, video {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none; 
+  pointer-events: none; 
 }
 
 /* Наследуем шрифты для полей ввода и кнопок */
 input, button, textarea, select {
   font: inherit;
+}
+
+::selection {
+  background: transparent;
+  color: inherit;
 }
 
 /* Полезно для плавного скролла (если пользователь не отключил его в системе) */

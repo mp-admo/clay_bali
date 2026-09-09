@@ -59,7 +59,7 @@ const isHome = Astro.url.pathname === "/";
 		align-items: center;
 	}
 
-	header .container {
+	.container {
 		width: 100%;
 		max-width: 140rem;
 		padding: 0 2rem;
@@ -72,14 +72,14 @@ const isHome = Astro.url.pathname === "/";
 	.header__nav {
 		display: flex;
 		align-items: center;
-		gap: 3.6rem;
+		gap: 3rem;
 	}
 
 	.header__nav-link {
 		color: #FFF1D3;
 		font-family: 'Montserrat';
-		font-size: 1.8rem;
-		font-weight: 500;
+		font-size: 1.6rem;
+		font-weight: 400;
 		line-height: 1.1;
 		text-decoration: none;
 		transition: opacity 0.3s ease;
@@ -100,7 +100,7 @@ const isHome = Astro.url.pathname === "/";
 		align-items: center;
 		gap: 0.4rem;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		font-weight: 400;
 		line-height: 1.1;
 	}
@@ -127,7 +127,7 @@ const isHome = Astro.url.pathname === "/";
 		background: transparent;
 		color: #FFF1D3;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		font-weight: 500;
 		line-height: 1.1;
 		text-transform: uppercase;
@@ -137,6 +137,13 @@ const isHome = Astro.url.pathname === "/";
 
 	.header__book:hover {
 		opacity: 0.6;
+	}
+
+	@media (max-width: 1440px) {
+	
+		.container {
+			padding: 0 5rem;
+		}
 	}
 
 </style>

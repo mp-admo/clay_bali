@@ -20,6 +20,7 @@ body {
     font-weight: 400;
     color: #fff;
     margin: 0;
+    letter-spacing: 0.01em;
 }
 
 h1, h2, h3, h4, h5 {

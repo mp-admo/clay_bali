@@ -104,7 +104,7 @@
 	.hero__socials {
 		display: flex;
 		align-items: center;
-		gap: 4rem;
+		gap: 3.6rem;
 	}
 
 	.hero__socials a {
@@ -122,13 +122,37 @@
 	.hero__description {
         color: #FFF1D3;
 		text-align: center;
-        line-height: 1.4;
+        line-height: 1.5;
 	}
 
 	.hero__status {
         color: #FFF1D3;
 		text-align: right;
-        line-height: 1.4;
+        line-height: 1.5;
+	}
+
+	@media (max-width: 1440px) {
+		
+		.hero__logo {
+			width: 22rem;
+		}
+
+		.hero .container {
+			padding: 0 5rem;
+		}
+
+		.hero__bottom {
+			padding-bottom: 5rem;
+		}
+
+		.hero__description {
+			font-size: 1.5rem;
+		}
+
+		.hero__status {
+			font-size: 1.5rem;
+		}
+
 	}
 
 </style>

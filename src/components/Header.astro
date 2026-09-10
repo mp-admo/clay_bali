@@ -42,15 +42,20 @@ const isHome = Astro.url.pathname === "/";
 			</button>
 		</div>
 
+		<button
+			type="button"
+			class="burger-button"
+			aria-label="Open menu"
+			aria-expanded="false"
+		>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
 	</div>
 
 </header>
-
-<button class="burger-button" aria-label="Open menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
 <div class="mobile-menu">
 
@@ -94,9 +99,7 @@ const isHome = Astro.url.pathname === "/";
 		left: 0;
 		width: 100%;
 		padding: 4rem 0;
-		z-index: 100;
-		display: flex;
-		align-items: center;
+		z-index: 200;
 	}
 
 	.container {
@@ -104,6 +107,7 @@ const isHome = Astro.url.pathname === "/";
 		max-width: 140rem;
 		padding: 0 2rem;
 		margin: 0 auto;
+
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -184,35 +188,31 @@ const isHome = Astro.url.pathname === "/";
     }
 
 	.mobile-menu {
-        position: fixed;
-		top: 0;
-        left: 0;
-        width: 100%;
-        height: 100dvh;
-        background-color: #131313;
-        padding: 4rem 3rem;
-        display: flex;
-        flex-direction: column;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s ease;
-        z-index: 200;
-        gap: 10rem;
-    }
+		position: fixed;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #131313;
+		padding: 16rem 3rem;
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
 
+		opacity: 0;
+		visibility: hidden;
+
+		transition:
+			opacity 0.3s ease,
+			visibility 0.3s ease;
+
+		z-index: 100;
+	}
 
 	.mobile-menu.is-open {
-        opacity: 1;
-        visibility: visible;
-    }
+		opacity: 1;
+		visibility: visible;
+	}
 
-	.mobile-menu__close span:first-child {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    .mobile-menu__close span:last-child {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
 
 	.mobile-menu__nav {
         display: flex;
@@ -223,7 +223,7 @@ const isHome = Astro.url.pathname === "/";
 	.mobile-menu__link {
         color: #FFF1D3;
 		font-family: 'Montserrat';
-		font-size: 1.8rem;
+		font-size: rem;
 		font-weight: 400;
 		line-height: 1.1;
         text-decoration: none;
@@ -265,16 +265,15 @@ const isHome = Astro.url.pathname === "/";
 	@media (max-width: 768px) {
 
 
-		.header__nav {
-			display: none;
-		}
-
 		.container {
 			padding: 0 3rem;
 		}
 
+		.header__nav {
+			display: none;
+		}
+
 		.header__actions {
-			width: 100%;
 			justify-content: flex-start;
 		}
 
@@ -283,64 +282,59 @@ const isHome = Astro.url.pathname === "/";
 		}
 
 		.header__book {
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 		}
 
-		.header__menu,
-        .header__button {
-            display: none;
-        }
+		.burger-button {
+			display: flex;
 
-        .header__nav {
-            justify-content: space-between;
-        }
+			flex-shrink: 0;
 
-        .burger-button {
-            display: flex;
-			position: fixed;
-            right: 3rem;
-			top: 3.5rem;
+			width: 2.4rem;
+			height: 2.4rem;
+
+			padding: 0;
+			border: 0;
+
+			background: transparent;
+
 			flex-direction: column;
 			justify-content: center;
 			align-items: flex-end;
+
 			gap: 0.4rem;
-			width: 2.4rem;
-			height: 2.4rem;
-			padding: 0;
-			border: none;
-			background: transparent;
+
 			cursor: pointer;
-			overflow: hidden;
-			z-index: 300;
-        }
 
-        .burger-button span {
-            display: block;
+			position: relative;
 
-            width: 2.4rem;
-            height: 0.2rem;
+			z-index: 1;
+		}
 
-            margin: 0;
+		.burger-button span {
+			display: block;
 
-            background-color: #FFF1D3;
+			width: 2.4rem;
+			height: 0.2rem;
 
-            transition:
-                transform 0.3s ease,
-                opacity 0.3s ease;
-        }
+			background-color: #FFF1D3;
 
-        .burger-button--active span:nth-child(1) {
-            transform: translateY(0.6rem) rotate(45deg);
-        }
+			transition:
+				transform 0.3s ease,
+				opacity 0.3s ease;
+		}
 
-        .burger-button--active span:nth-child(2) {
-            opacity: 0;
-        }
+		.burger-button--active span:nth-child(1) {
+			transform: translateY(0.6rem) rotate(45deg);
+		}
 
-        .burger-button--active span:nth-child(3) {
-            transform: translateY(-0.6rem) rotate(-45deg);
-        }
+		.burger-button--active span:nth-child(2) {
+			opacity: 0;
+		}
 
+		.burger-button--active span:nth-child(3) {
+			transform: translateY(-0.6rem) rotate(-45deg);
+		}
 	}
 
 </style>
@@ -395,38 +389,28 @@ const isHome = Astro.url.pathname === "/";
 </script>
 
 <script>
+	const burgerBtn = document.querySelector('.burger-button');
+	const mobileMenu = document.querySelector('.mobile-menu');
+	const menuLinks = document.querySelectorAll('.mobile-menu__link');
 
-    const burgerBtn = document.querySelector('.burger-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const menuLinks = document.querySelectorAll('.mobile-menu__link');
+	if (burgerBtn && mobileMenu) {
 
-    if (burgerBtn && mobileMenu) {
+		burgerBtn.addEventListener('click', () => {
+			burgerBtn.classList.toggle('burger-button--active');
+			mobileMenu.classList.toggle('is-open');
 
-        burgerBtn.addEventListener('click', () => {
+			document.body.style.overflow =
+				mobileMenu.classList.contains('is-open')
+					? 'hidden'
+					: '';
+		});
 
-            mobileMenu.classList.toggle('is-open');
-            burgerBtn.classList.toggle('burger-button--active');
-
-            if (mobileMenu.classList.contains('is-open')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-
-        });
-
-        menuLinks.forEach(link => {
-
-            link.addEventListener('click', () => {
-
-                mobileMenu.classList.remove('is-open');
-                burgerBtn.classList.remove('burger-button--active');
-                document.body.style.overflow = '';
-
-            });
-
-        });
-
-    }
-
+		menuLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				burgerBtn.classList.remove('burger-button--active');
+				mobileMenu.classList.remove('is-open');
+				document.body.style.overflow = '';
+			});
+		});
+	}
 </script>

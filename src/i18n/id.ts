@@ -5,7 +5,7 @@ export default {
 	events: "Acara",
 	philosophy: "Filosofi",
 	contact: "Kontak",
-	book: "Reservasi Meja",
+	book: "Nantikan",
 
 	// Hero
 	heroDescription: "Pengalaman bersantap khas Ubud<br />Dibentuk dari tanah liat · Dimasak di atas api kayu · Hidangan untuk berbagi<br />Ritual teh · Malam shisha yang santai",

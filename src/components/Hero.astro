@@ -4,9 +4,15 @@
 
 <section class="hero" id="top">
 
-	<video class="hero__bg" autoplay muted loop playsinline preload="auto">
-		<source src="/video_hero_clay.mp4" type="video/mp4">
+	<video class="hero__bg hero__bg--desktop" autoplay muted loop playsinline preload="auto">
+		<source src="/video_hero_desktop_clay.mp4" type="video/mp4">
 	</video>
+
+	<video class="hero__bg hero__bg--mobile" autoplay muted loop playsinline preload="auto">
+		<source src="/video_hero_mobile_clay.mp4" type="video/mp4">
+	</video>
+
+	<div class="hero__overlay"></div>
 
 	<div class="hero__logo">
 		<img src="/logo_clay.svg" alt="Clay" draggable="false"/>
@@ -76,7 +82,7 @@
 		height: auto;
 	}
 
-	.hero .container {
+	.container {
 		width: 100%;
 		max-width: 140rem;
 		padding: 0 2rem;
@@ -131,6 +137,14 @@
         line-height: 1.5;
 	}
 
+	.hero__bg--mobile {
+		display: none;
+	}
+
+	.hero__overlay {
+		display: none;
+	}
+
 	@media (max-width: 1440px) {
 		
 		.hero__logo {
@@ -152,6 +166,67 @@
 		.hero__status {
 			font-size: 1.5rem;
 		}
+
+	}
+
+	@media (max-width: 768px) {
+
+		.hero__bg--desktop {
+			display: none;
+		}
+
+		.hero__bg--mobile {
+			display: block;
+		}
+
+		.hero__logo {
+			width: 18rem;
+		}
+
+		.hero .container {
+			padding: 0 3rem;
+		}
+
+		.hero__bottom {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 6rem;
+			gap: 3rem;	 
+		}
+
+		.hero__socials {
+			gap: 2rem;
+		}
+
+		.hero__socials a {
+			width: 3em;
+			height: 3rem;
+		}
+
+		.hero__description {
+			font-size: 1.4rem;
+		}
+
+		.hero__status {
+			text-align: center;
+			font-size: 1.4rem;
+		}
+
+		.hero__overlay {
+			display: block;
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+			pointer-events: none;
+
+			background: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 0.60) 0%,
+				rgba(0, 0, 0, 0) 40%
+			);
+		}
+
 
 	}
 

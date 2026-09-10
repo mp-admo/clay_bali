@@ -4,8 +4,6 @@ html {
     font-size: 62.5%; /* 1rem ровно 10px вместо 16px */
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
-    background-color: #FF43A4;
-    overscroll-behavior-y: none;
 }
 
 @media (max-width: 768px) {
@@ -23,7 +21,6 @@ body {
     color: #fff;
     margin: 0;
     letter-spacing: 0.01em;
-    overscroll-behavior-y: none;
 }
 
 h1, h2, h3, h4, h5 {

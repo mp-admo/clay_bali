@@ -4,7 +4,7 @@ html {
     font-size: 62.5%; /* 1rem ровно 10px вместо 16px */
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
-    background-color: #131313;
+    background-color: #FF43A4;
 }
 
 @media (max-width: 768px) {

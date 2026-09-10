@@ -23,15 +23,24 @@ import Layout from "../layouts/Layout.astro";
             <div class="hero__bottom">
 
                 <div class="hero__socials">
-                    <a href="#" aria-label="Facebook">
+                    <a
+                    href="#"
+                    aria-label="Facebook" 
+                    >
                         <img src="/facebook_icon_clay.svg" alt="" />
                     </a>
 
-                    <a href="#" aria-label="Instagram">
+                    <a 
+                    href="https://www.instagram.com/clay.bali?stkn=Nzk5ZmV2am03enU=" 
+                    aria-label="Instagram" 
+                    target="_blank">
                         <img src="/instagram_icon_clay.svg" alt="" />
                     </a>
 
-                    <a href="#" aria-label="WhatsApp">
+                    <a 
+                    href="https://wa.me/message/YW2DQFFZ7CY7L1" 
+                    aria-label="WhatsApp" 
+                    target="_blank">
                         <img src="/whatsapp_icon_clay.svg" alt="" />
                     </a>
                 </div>
@@ -115,12 +124,17 @@ import Layout from "../layouts/Layout.astro";
             display: block;
             width: 2.4rem;
             height: 2.4rem;
+            transition: transform 0.2s ease;
         }
 
         .hero__socials img {
             width: 100%;
             height: 100%;
             object-fit: contain;
+        }
+
+        .hero__socials a:hover {
+            transform: translateY(-2px);
         }
 
         .hero__description {

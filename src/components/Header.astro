@@ -37,9 +37,15 @@ const isHome = Astro.url.pathname === "/";
 				<button type="button" data-language="id">ID</button>
 			</div>
 
-			<button type="button" class="header__book" data-i18n="book">
+			<a
+				href="https://whatsapp.com/channel/0029Vb8ZEAN6rsQsDuyLeT1V"
+				class="header__book"
+				data-i18n="book"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				{translations.en.book}
-			</button>
+			</a>
 		</div>
 
 		<button
@@ -177,6 +183,7 @@ const isHome = Astro.url.pathname === "/";
 		text-transform: uppercase;
 		cursor: pointer;
 		transition: opacity 0.3s ease;
+		text-decoration: none;
 	}
 
 	.header__book:hover {

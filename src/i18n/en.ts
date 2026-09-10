@@ -10,4 +10,7 @@ export default {
 	// Hero
 	heroDescription: "The handmade dining experience of Ubud<br />Shaped in clay · Cooked over wood fire · Shared plates<br />Tea rituals · Slow shisha nights",
 	heroStatus: "The fire is rising...",
+
+	// Soon
+	soon: "Soon",
 };

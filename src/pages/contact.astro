@@ -150,6 +150,22 @@ import Layout from "../layouts/Layout.astro";
     .contact {
         min-height: 100vh;
         background-color: #131313;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("/sand_background.webp") center / cover no-repeat;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .contact > * {
+        position: relative;
+        z-index: 1;
     }
 
     .container {

@@ -33,11 +33,19 @@ import Layout from "../layouts/Layout.astro";
                         <div class="contact__item contact__desktop-only">
                             <h5>Social Media</h5>
                             <div class="contact__socials">
-                                <a href="#" class="contact__social">
+                                <a 
+                                href="https://www.instagram.com/clay.bali?stkn=Nzk5ZmV2am03enU="
+                                class="contact__social"
+                                target="_blank"
+                                rel="noopener noreferrer">
                                     <img src="/contact_icon/instagram.png" alt="Instagram">
                                 </a>
 
-                                <a href="#" class="contact__social">
+                                <a 
+                                href="https://wa.me/message/YW2DQFFZ7CY7L1" 
+                                class="contact__social"
+                                target="_blank"
+                                rel="noopener noreferrer">
                                     <img src="/contact_icon/whatsapp.png" alt="WhatsApp">
                                 </a>
                             </div>
@@ -88,12 +96,18 @@ import Layout from "../layouts/Layout.astro";
                                 <span>Grab</span>
                             </a>
 
-                            <a href="#" class="contact__social">
+                            <a 
+                            href="https://www.instagram.com/clay.bali?stkn=Nzk5ZmV2am03enU=" class="contact__social"
+                            target="_blank"
+                            rel="noopener noreferrer">
                                 <img src="/contact_icon/instagram.png" alt="Instagram">
                                 <span>Instagram</span>
                             </a>
 
-                            <a href="#" class="contact__social">
+                            <a href="https://wa.me/message/YW2DQFFZ7CY7L1" 
+                            class="contact__social"
+                            target="_blank"
+                            rel="noopener noreferrer">
                                 <img src="/contact_icon/whatsapp.png" alt="WhatsApp">
                                 <span>WhatsApp</span>
                             </a>
@@ -115,6 +129,13 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
 </Layout>
+
+<style is:global>
+        html,
+        body {
+            background-color: #131313;
+        }
+</style>
 
 <style>
 
@@ -391,23 +412,23 @@ import Layout from "../layouts/Layout.astro";
 
         .contact__title {
             margin-bottom: 4rem;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
 
         .contact__item {
-            margin-bottom: 3rem;
+            margin-bottom: 2.4rem;
         }
 
         .contact__item h5 {
             font-family: 'Montserrat', sans-serif;
             margin-bottom: 0.8rem;
             font-weight: 400;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
 
         .contact__column--contacts {
             order: 3;
-            margin-bottom: 6rem;
+            margin-bottom: 4rem;
         }
 
         .contact__column--hours {
@@ -436,6 +457,10 @@ import Layout from "../layouts/Layout.astro";
             width: 100vw;
             height: 1px;
             background-color: #C4C4C4;
+        }
+
+        .contact__social:hover {
+            transform: none;
         }
     }
 

@@ -4,121 +4,378 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Contact | Clay Bali">
 
-    <section class="contact">|
+    <section class="contact">
 
         <div class="container">
 
-            <div class="contact__header">
+            <div class="contact__content">
 
-                <img
-                    src="/images/logo_clay.svg"
-                    alt="Clay"
-                    class="contact__logo"
-                >
-
-                <h4 class="contact__slogan">
-                    Find your way to Clay
-                </h4>
-
-            </div>
-
-            <div class="contact__grid">
-
-                <div class="contact__column">
-                    
-                    <h5 >Contacts</h5>
-
-                    <div class="contact__item">
-                        
-                        <h5>WhatsApp</h5>
-                        <span>+62 822 7314 5068</span>
-
-                    </div>
-
-                    <div class="contact__item">
-
-                        <h5>Address</h5>
-                        <span>
-                            Jl. Raya Pengosekan No. 88,<br>
-                            Ubud, Gianyar, Bali
-                        </span>
-
-                    </div>
-
-                    <div class="contact__item">
-
-                        <h5>Social Media</h5>
-
-                        <div class="contact__socials">
-
-                            <a href="#" class="contact__social">
-                                <img src="/images/instagram.svg" alt="Instagram">
-                                <span>Instagram</span>
-                            </a>
-
-                            <a href="#" class="contact__social">
-                                <img src="/images/whatsapp.svg" alt="WhatsApp">
-                                <span>WhatsApp</span>
-                            </a>
-
-                        </div>
-
-                    </div>
-
+                <div class="contact__header">
+                    <img src="/contact_logo_clay.svg" alt="Clay" class="contact__logo">
+                    <h4 class="contact__slogan">Find your way to Clay</h4>
                 </div>
 
-                <div class="contact__column">
+                <div class="contact__grid">
 
-                    <h5 class="contact__title">Opening Hource</h5>
 
-                    <div class="contact__item">
+                    
+                    <div class="contact__column contact__column--contacts">
+                        <h5 class="contact__title">Contacts</h5>
+                        <div class="contact__item">
+                            <h5>WhatsApp</h5>
+                            <span>+62 822 7314 5068</span>
+                        </div>
+                        <div class="contact__item">
+                            <h5>Address</h5>
+                            <span>Jl. Raya Pengosekan No. 88,<br>Ubud, Gianyar, Bali</span>
+                        </div>
+                        
+                        <div class="contact__item contact__desktop-only">
+                            <h5>Social Media</h5>
+                            <div class="contact__socials">
+                                <a href="#" class="contact__social">
+                                    <img src="/contact_icon/instagram.png" alt="Instagram">
+                                </a>
 
-                        <h5>Clay Restaurant</h5>
-                        <p>Soon</p>
-
+                                <a href="#" class="contact__social">
+                                    <img src="/contact_icon/whatsapp.png" alt="WhatsApp">
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="contact__item">
+                    
+                    <div class="contact__column contact__column--hours">
+                        <h5 class="contact__title">Opening Hource</h5>
+                        <div class="contact__item">
+                            <h5>Clay Restaurant</h5>
+                            <span class="soon-text">Soon</span>
+                        </div>
+                        <div class="contact__item">
+                            <h5>Private Events</h5>
+                            <span>Available upon request</span>
+                        </div>
 
-                        <h5>Private Events</h5>
-                        <p>Available upon request</p>
+                        <div class="contact__item contact__desktop-only">
+                            <h5>Delivery</h5>
+                            <div class="contact__socials">
+                                <a href="#" class="contact__social">
+                                    <img src="/contact_icon/gojek.png" alt="Gojek">
+                                </a>
 
+                                <a href="#" class="contact__social">
+                                    <img src="/contact_icon/grab.png" alt="Grab">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="contact__map">
+                        <!-- Сюда вставим API карты -->
                     </div>
 
-                    <div class="contact__item">
-
-                        <h5>Delivery</h5>
-
-                        <div class="contact__socials">|
-
+                    
+                    <div class="contact__mobile-media">
+                        <div class="contact__socials">
                             <a href="#" class="contact__social">
-                                <img src="/images/gojek.svg" alt="Gojek">
+                                <img src="/contact_icon/gojek.png" alt="Gojek">
                                 <span>Gojek</span>
                             </a>
 
                             <a href="#" class="contact__social">
-                                <img src="/images/grab.svg" alt="Grab">
+                                <img src="/contact_icon/grab.png" alt="Grab">
                                 <span>Grab</span>
                             </a>
 
-                        </div>
+                            <a href="#" class="contact__social">
+                                <img src="/contact_icon/instagram.png" alt="Instagram">
+                                <span>Instagram</span>
+                            </a>
 
+                            <a href="#" class="contact__social">
+                                <img src="/contact_icon/whatsapp.png" alt="WhatsApp">
+                                <span>WhatsApp</span>
+                            </a>
+
+                        </div>
                     </div>
 
                 </div>
 
-                <div class="contact__map"></div>
-
             </div>
+
+            <footer class="contact__footer">
+                <span>© 2026 Clay. All rights reserved</span>
+                <span>Designed by Dojotal</span>
+            </footer>
 
         </div>
 
-        <footer class="contact__footer">
-            <span>© 2026 Clay. All rights reserved</span>
-            <span>Designed by Djotaal</span>
-        </footer>
-        
     </section>
 
-
 </Layout>
+
+<style>
+
+    .contact {
+        min-height: 100vh;
+        background-color: #131313;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 140rem;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__content {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 10rem;
+    }
+
+    .contact__logo {
+        width: 18rem;
+        height: auto;
+    }
+
+    .contact__slogan {
+        text-transform: uppercase;
+    }
+
+    .contact__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.4fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .contact__column {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .contact__title {
+        margin-bottom: 6rem;
+        text-transform: uppercase;
+    }
+
+    .contact__item {
+        margin-bottom: 3rem;
+    }
+
+    .contact__item:last-child {
+        margin-bottom: 0;
+    }
+
+    .contact__item h5 {
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+
+    .contact__item span {
+        font-family: 'Montserrat', sans-serif;
+        color: #C4C4C4;
+    }
+
+
+    .contact__desktop-only {
+        margin-top: auto;  
+    }
+
+    .soon-text {
+       text-transform: uppercase; 
+    }
+
+    .contact__map {
+        width: 100%;
+        height: 100%;
+        background-color: #222;
+    }
+
+    .contact__socials {
+        display: flex;
+        gap: 1.4rem;
+        margin-top: 2.4rem;
+    }
+
+    .contact__social {
+        transition: transform 0.2s ease;
+    }
+
+    .contact__social:hover {
+		transform: translateY(-2px);
+	}
+
+    .contact__social img {
+        display: block;
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+
+    .contact__mobile-media {
+        display: none;
+    }
+
+    .contact__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 3rem;
+        font-size: 1.4rem;
+        font-family: 'Montserrat', sans-serif;
+        color: #C4C4C4;
+    }
+
+    @media (max-width: 768px) {
+
+        .container {
+            padding: 0 3rem;
+        }
+
+        .contact__content {
+            flex: none;
+            padding-top: 15rem;
+        }
+
+        .contact__header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact__logo {
+            width: 12rem;
+        }
+
+        .contact__slogan {
+            font-size: 2.2rem;
+        }
+
+        .contact__grid {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+        }
+
+        .contact__column {
+            height: auto;
+        }
+
+        .contact__map {
+            order: 1;
+            width: 100%;
+            aspect-ratio: 1.65;
+        }
+
+        .contact__mobile-media {
+            order: 2;
+            display: block;
+            margin: 3rem 0 7rem;
+        }
+
+        .contact__mobile-media .contact__socials {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0;
+            gap: 0;
+        }
+
+        .contact__mobile-media .contact__social {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7rem;
+            text-decoration: none;
+        }
+
+        .contact__mobile-media .contact__social img {
+            width: 6rem;
+            height: 6rem;
+            flex-shrink: 0;
+        }
+
+        .contact__mobile-media .contact__social span {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: #C4C4C4;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .contact__title {
+            margin-bottom: 4rem;
+            font-size: 1.8rem;
+        }
+
+        .contact__item {
+            margin-bottom: 3rem;
+        }
+
+        .contact__item h5 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+            font-size: 1.8rem;
+        }
+
+        .contact__column--contacts {
+            order: 3;
+            margin-bottom: 6rem;
+        }
+
+        .contact__column--hours {
+            order: 4;
+        }
+
+        .contact__desktop-only {
+            display: none;
+        }
+
+        .contact__footer {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 5rem;
+            gap: 0.8rem;
+            padding: 2rem 0;
+        }
+
+        .contact__footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -3rem;
+            width: 100vw;
+            height: 1px;
+            background-color: #C4C4C4;
+        }
+    }
+
+
+
+
+
+</style>
